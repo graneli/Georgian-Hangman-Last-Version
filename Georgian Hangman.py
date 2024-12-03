@@ -1,5 +1,5 @@
-import random
-import os
+import random # თამაშის შემთხვევითი ელემენტების შესაქმნელად
+import os # ფაილური ოპერაციების სამართავად
 
 # ჰენგმენის კლასის განსაზღვრა (სადაც თამაშის ლოგიკას აღვწერ)
 class Hangman:
@@ -65,7 +65,7 @@ class Hangman:
 def main():
     # მთავარი ფუნქცია , რომელიც მართავს მთელ თამაშის პროცესს
     words = ["khachapuri","lobiani","khinkali","mtsvadi","elarji"] # სიტყვების სია, საიდანაც შემთხვევითობის პრონციპით მოხდება სიტყვის არჩევა
-    hangman = Hangman(words)  # ახალი ობიექტის შექმნა
+    hangman = Hangman(words)  # ახალი hangman ობიექტის შექმნა
 
     # მისასალმებელი სიტყვა და ზოგადი ინსტრუქცია
     print("\nWelcome to Georgian Hangman!")
@@ -85,7 +85,7 @@ def main():
             print("Invalid input! Please enter a letter (just one)")
             continue
 
-        hangman.guess_letter(guess)  # ამუშავებს მოთამაშის მითითებულ ასოს
+        hangman.guess_letter(guess)  # მიმართავს Hangman ობიექტს, რომ შეამოწმოს მოთამაშის მითითებული ასო
 
     # თამაშის დასასრულის ტექსტი მოთამაშისთვის მოგების ან/და წაგების შემთხვევაში
     if hangman.is_word_guessed():
